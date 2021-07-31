@@ -2,10 +2,6 @@ document.addEventListener("DOMContentLoaded", () => {
   //card options
   const cardArray = [
     {
-      name: "blank",
-      img: "images/blank.png",
-    },
-    {
       name: "cheeseburger",
       img: "images/cheeseburger.png",
     },
@@ -30,8 +26,29 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "images/pizza.png",
     },
     {
-      name: "whie",
+      name: "white",
       img: "images/white.png",
     },
   ];
+  const grid = document.querySelector(".grid");
+  var cardsChosen = [];
+  // create board
+
+  function createBoard() {
+    for (let i = 0; i < cardArray.length; i++) {
+      var card = document.createElement("img");
+      card.setAttribute("src", "images/blank.png");
+      card.setAttribute("data-id", i);
+      card.addEventListener("click", "flipCard");
+      grid.appendChild(card);
+    }
+  }
+  // check for matches
+  // flip your card
+  function flipCard() {
+    var cardId = this.getAttribute("data-id");
+    cardsChosen.push(cardArray[cardId]);
+  }
+
+  createBoard();
 });
