@@ -30,11 +30,13 @@ document.addEventListener("DOMContentLoaded", () => {
       img: "images/white.png",
     },
   ];
+
+  cardArray.sort(() => 0.5 - Math.random());
+  const resultDisplay = document.querySelector("#result");
   const grid = document.querySelector(".grid");
   var cardsChosen = [];
   var cardsChosenId = [];
   var cardsWon = [];
-
 
   // create board
   function createBoard() {
@@ -51,15 +53,19 @@ document.addEventListener("DOMContentLoaded", () => {
     var cards = document.querySelectorAll("img");
     const optionOneId = cardsChosenId[0];
     const optionTwoId = cardsChosenId[1];
-    if (cardsChosen[0] === cardsChosen[1]){
-      alert ('You Found a Match')
-      cards[optionOneId].setAttribute("src", "images/white.png")
-      cards[optionOneId].setAttribute("src", "images/white.png")
-      cardsWon.push(cardsChosen)
-  }else {
-    cards[optionOneId].setAttribute('src'. "images/blank.png")
-    cards[optionTwoId].setAttribute('src'. "images/blank.png")
-    alert("sorry, try again")
+    if (cardsChosen[0] === cardsChosen[1]) {
+      alert("You Found a Match");
+      cards[optionOneId].setAttribute("src", "images/white.png");
+      cards[optionOneId].setAttribute("src", "images/white.png");
+      cardsWon.push(cardsChosen);
+    } else {
+      cards[optionOneId].setAttribute("src", "images/blank.png");
+      cards[optionTwoId].setAttribute("src", "images/blank.png");
+      alert("sorry, try again");
+    }
+    cardsChosen = [];
+    cardsChosenId = [];
+    resultDisplay;
   }
 
   // flip your card
