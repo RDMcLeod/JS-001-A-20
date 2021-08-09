@@ -82,7 +82,9 @@ document.addEventListener("DOMContentLoaded", () => {
     } else if (cardsChosen[0] === cardsChosen[1]) {
       alert("You Found a Match");
       cards[optionOneId].setAttribute("src", "images/white.png");
-      cards[optionOneId].setAttribute("src", "images/white.png");
+      cards[optionTwoId].setAttribute("src", "images/white.png");
+      cards[optionOneId].removeEventListener("click", flipCard);
+      cards[optionTwoId].removeEventListener("click", flipCard);
       cardsWon.push(cardsChosen);
     } else {
       cards[optionOneId].setAttribute("src", "images/blank.png");
