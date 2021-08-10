@@ -28,6 +28,9 @@ function moveMole() {
   let timerId = null;
   timerId = setInterval(randomSquare, 1000);
 }
+
+moveMole();
+
 function countDown() {
   currentTime--;
   timeLeft.textContent = currentTime;
