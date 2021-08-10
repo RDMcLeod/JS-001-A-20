@@ -12,3 +12,7 @@
   width: 618px;
   height: 618px;
 }
+.mole {
+  background-image: url(images/mole.jpg);
+  background-size: cover;
+}
