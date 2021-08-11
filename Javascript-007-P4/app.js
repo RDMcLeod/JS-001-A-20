@@ -13,7 +13,7 @@ function randomSquare() {
     square.classList.remove("mole");
   });
 
-  let randomSquare = squares[Math.floor.floor(Math.random() * 9)];
+  let randomSquare = squares[Math.floor(Math.random() * 9)];
   randomSquare.classList.add("mole");
 
   hitPosition = randomSquare.id;
