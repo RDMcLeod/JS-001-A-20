@@ -1,5 +1,5 @@
 const squares = document.querySelectorAll(".square");
-const mole = document.querySelectorAll(".mole");
+const mole = document.querySelector(".mole");
 const timeLeft = document.querySelector("#time-Left");
 const score = document.querySelector("#score");
 
@@ -9,15 +9,14 @@ let currentTime = 60;
 let timerId = null;
 
 function randomSquare() {
-  squares.forEach((className) => {
-    className.classList.remove("mole");
+  squares.forEach((square) => {
+    square.classList.remove("mole");
   });
 
-  let randomPosition = square[Math.floor.floor(Math.random() * 9)];
-  randomPosition.classList.add("mole");
+  let randomSquare = squares[Math.floor.floor(Math.random() * 9)];
+  randomSquare.classList.add("mole");
 
-  // assign the id of the randomPostion to hitPoistion for us to use later
-  hitPosition = randomPosition.id;
+  hitPosition = randomSquare.id;
 }
 squares.forEach((square) => {
   square.addEventListener("mousedown", () => {
@@ -39,7 +38,7 @@ function countDown() {
   timeLeft.textContent = currentTime;
 
   if (currentTime == 0) {
-    clearInterval(timerId);
+    clearInterval(countDownTimerId);
     clearInterval(timerId);
     alert("GAME OVER! Your final score is" + result);
   }
