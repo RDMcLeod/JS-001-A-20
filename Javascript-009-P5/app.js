@@ -5,13 +5,21 @@ document.addEventListener("DOMCom=ntentLoaded", ()=>{
     let displayCurrentPlayer = 1
 
     for (var i = 0, len = square.length; i < len; i++)
-    (function (index)){
+    
+    (function (index){
         // add and onclick to each sqauer in grid
-        squares[i].onclick = function (){
+     squares[i].onclick = function (){
+            // comment
+        if (squares[index + 7].classList.contains("taken")){
+         if (currentPlayer === 1) {
+            squares[index].classList.addEventListener("taken")
+            squares[index].classList.addEventListener("player-one")
+                }
+            }
             
 
         }
     }
 
-    }
+    
 })
