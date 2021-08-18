@@ -47,7 +47,14 @@ document.addEventListener("DOMCom=ntentLoaded", () => {
          square3.classList.contains("player-one")&&
          square4.classList.contains("player-one")){
           // if they do, player-one is apssed a the winner
+          result.innerHTML ="Player One Wins!"
          }
+         // now check to see if they all have the class noame of plyer-two
+         else if (square1.classList.contains("player-Two") &&
+         square2.classList.contains("player-Two")&&
+         square3.classList.contains("player-Two")&&
+         square4.classList.contains("player-Two")){
+           // if they do player-two is passedd as the winner
   
   }
   };
