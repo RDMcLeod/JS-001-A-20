@@ -14,7 +14,17 @@ document.addEventListener("DOMContentLoaded", () => {
   let interval = 0
 
   // assign functions to keycodes
+ function control(e) {
+   squares [currentIndex].classList.remove("snake") //removing the class of snake
 
+   if (e.keyCode === 39){
+     direction = 1 // if we pres the right arrow key on keyboard, the snake wil go right
+
+   }else if (e.keyCode = 38){
+     direction = -width // if we press the up arrow the snake will go back 10 divs appaearing to go up
+   }else if (e.ketCode === 37)
+   direction -1 // if we press left the snake will go left 1 div
+ }
 
 
 });
