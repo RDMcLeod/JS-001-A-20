@@ -26,6 +26,8 @@ document.addEventListener("DOMContentLoaded", () => {
     intervalTime = 0
     currentSnake = [2,1,0]
     currentIndex = 0
+    currentSnake.forEach (index => squares[index].classList.add("snake"))
+    interval = setInterval(moveOutcomes, intervalTime)
   }
 
 
