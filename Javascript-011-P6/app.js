@@ -33,17 +33,23 @@ document.addEventListener("DOMContentLoaded", () => {
    //function that deals with al the outcomes of the snake
    function moveOutcomes(){
      // deals with snake  hitting border and snake hitting self
-    if (currentSnake[0] + width >= (width * width)&& direction === width ) || // if sanke hits bottom
-       (currentSnake[0] % width === width -1 && direction === 1) //if snake hits right wall
-       (currentSnake[0] % width === 0 && direction === -1)  // if snake hits left wall
-
-
-   }
+     if (
+      (currentSnake[0] + width >= (width * width) && direction === width ) || //if snake hits bottom
+      (currentSnake[0] % width === width -1 && direction === 1) || //if snake hits right wall
+      (currentSnake[0] % width === 0 && direction === -1) || //if snake hits left wall
+      (currentSnake[0] - width < 0 && direction === -width) ||  //if snake hits the top
+      squares[currentSnake[0] + direction].classList.contains('snake') //if snake goes into itself
+    ) {
+      return clearInterval(interval) //this will clear the interval if any of the above happen
+    }
+   
+   
+   
+   
+   
+   
    // deals with snake getting apple
-
-
-
-
+   
   // assign functions to keycodes
  function control(e) {
    squares [currentIndex].classList.remove("snake") //removing the class of snake
