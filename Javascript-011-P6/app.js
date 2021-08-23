@@ -44,11 +44,32 @@ document.addEventListener("DOMContentLoaded", () => {
     }
    const tail = currentSnake.pop() // removes last part of array and shows it
    squares[tail].classList.remove("snake") // removes class of sanke from the tail
-   currentSnake.unshift(currentSnake[0] + direction)
+   currentSnake.unshift(currentSnake[0] + direction) // gives direction to head of array
       
    
-   
    // deals with snake getting apple
+    if(squares[currentSnake[0]].classList.contains("apple")){
+    squares[currentSnake[0]].classList.remove("apple")
+    squares[tail].classList.add("snake")
+    currentSnake.push(tail)
+    // randomApple()  
+    score++
+    scoreDisplay.textContent = score
+    clearInterval(interval)
+    intervalTime = intervalTime * speed
+    interval = setInterval(moveOutcomes, intervalTime)
+  }
+  squares[currentSnake[0]].classList.add("snake")
+}
+
+// generate new apple once apple is eaten
+function randomApple(){
+  do{
+    appleIndex = Math.floor(Math.random() * squares.length)
+  }while(squares[appleIndex].classList.comtains("snake"))
+}
+
+
    
   // assign functions to keycodes
  function control(e) {
@@ -59,10 +80,11 @@ document.addEventListener("DOMContentLoaded", () => {
    }else if (e.keyCode = 38){
    direction = -width // if we press the up arrow the snake will go back 10 divs appaearing to go up
    }else if (e.keyCode === 37)
-   direction -1 // if we press left the snake will go left 1 div
+   direction = -1 // if we press left the snake will go left 1 div
    }else if (e.keyCode === 40){
    direction = +width // 
  }
 }
 document.addEventListener("keyup", control)
+startBtn.addEventListener("click, startGame")
 });
