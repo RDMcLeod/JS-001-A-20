@@ -24,11 +24,11 @@ document.addEventListener("DOMContentLoaded", () => {
   // move the shooter across the grid line
   function moveShooter(e) {
     squares[currentShooterIndex].classList.remove('shooter')
-    switch(e.key) {
-    case 'ArrowLeft':
+    switch(e.keyCode) {
+    case '37':
       if (currentShooterIndex % width !== 0) currentShooterIndex -=1
       break
-    case 'ArrowRight' :
+    case '39' :
       if (currentShooterIndex % width < width -1) currentShooterIndex +=1
       break
   }
