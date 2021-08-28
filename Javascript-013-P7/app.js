@@ -25,28 +25,37 @@ document.addEventListener("DOMContentLoaded", () => {
   function moveShooter(e) {
     squares[currentShooterIndex].classList.remove("shooter");
     switch (e.keyCode) {
-      case "37":
+      case 37:
         if (currentShooterIndex % width !== 0) currentShooterIndex -= 1;
         break;
-      case "39":
+      case 39:
         if (currentShooterIndex % width < width - 1) currentShooterIndex += 1;
         break;
     }
     squares[currentShooterIndex].classList.add("shooter");
   }
-  document.addEventListener('keydown', moveShooter)
+  document.addEventListener("keydown", moveShooter);
 
-function moveInvaders() {
-  const leftEdge = alienInvaders[0] % width === 0
-  const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width -1
-  remove()
+  // move the alien invaders
+  function moveInvaders() {
+    const leftEdge = alienInvaders[0] % width === 0;
+    const rightEdge = alienInvaders[alienInvaders.length - 1] % width === width - 1;
 
-  
-   if (rightEdge && goingRight) {
-    for (let i = 0; i < alienInvaders.length; i++) {
-      alienInvaders[i] += width +1
-      direction = -1
-      goingRight = false
-    }
+  if ((leftEdge && direction === 1) || (rightEdge && direction === 1))){
+    direction = width
+  }else if (direction === width){
+    if (leftEdge) direction = 1
+    else direction = -1
   }
-});
+  for (let i = 0; i <= alienInvaders.length -1; i++) {
+    squares[aleinInvaders[i]].classList.remove("invader")
+  }    
+  for (let i = 0; i <= alienInvaders.length -1; i++){
+    aliennInvaders[i] += direction
+  }
+  for (let i = 0; i <= alienInvaders.length -1; i++){
+    squares[aleinInvaders[i]].classList.remove("invader")
+  }
+  // decide a game over
+  if (squares[currentShooterIndex].classList.contains("invader"))
+}
