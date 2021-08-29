@@ -57,5 +57,9 @@ document.addEventListener("DOMContentLoaded", () => {
     squares[aleinInvaders[i]].classList.remove("invader")
   }
   // decide a game over
-  if (squares[currentShooterIndex].classList.contains("invader"))
+  if (squares[currentShooterIndex].classList.contains("invader", "shooter")){
+    resultDisplay.textContent = "Game Over"
+    squares[currentShooterIndex].classList.add("boom")
+    clearInterval(invaderId)
+  }
 }
