@@ -67,5 +67,23 @@ document.addEventListener("DOMContentLoaded", () => {
       resultDisplay.textContent ="Game Over"
       clearInterval(InvaderId)
     }
+   }
   }
+  invaderId = setInterval(moveInvaders, 500)
+
+  // shoot at aliens
+  function shoot (e) {
+    let laserId
+    let currentLaserIndex = currentShooterIndex
+    // move the laser from the shooter to the alien Invader
+    function movelaser(){
+      squares[currentLaserIndex].classList.remove("laser")
+      currentLaserIndex -= width
+      squares[currentLaserIndex].classList.add("laser")
+      if (squares[cirrentLaserIndex].contains(invader)){
+        squares[currentLaserIndex].classList.remove("laser")
+        squares[currentLaserIndex].classList.remove("Invader")
+        squares[currentLaserIndex].classList.add("boom")
+      }
+    }
   }
