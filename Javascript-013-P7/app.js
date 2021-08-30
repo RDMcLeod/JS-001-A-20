@@ -84,6 +84,8 @@ document.addEventListener("DOMContentLoaded", () => {
         squares[currentLaserIndex].classList.remove("laser")
         squares[currentLaserIndex].classList.remove("Invader")
         squares[currentLaserIndex].classList.add("boom")
+
+        setTimeout(() => sqaures[currentLaserIndex].classList.remove("boom"))
       }
     }
   }
