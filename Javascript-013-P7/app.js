@@ -85,7 +85,19 @@ document.addEventListener("DOMContentLoaded", () => {
         squares[currentLaserIndex].classList.remove("Invader")
         squares[currentLaserIndex].classList.add("boom")
 
-        setTimeout(() => sqaures[currentLaserIndex].classList.remove("boom"))
+        setTimeout(() => squares[currentLaserIndex].classList.remove("boom"), 250)
+        clearInterval(laserId)
+
+        const alienTakenDown = alienInvaders.indexOf(currentLaserIndex)
+        alienInvadersTakendown.push(alienTakenDown)
+        result++
+        resultDisplay.textContent = result
+      }
+      if (currenLaserIndex < width){
+        clearInterval(laserId)
+        setTimeout(() => squares[currentLaserIndex].classList.remove("laser"), 100)
+          
+        
       }
     }
   }
