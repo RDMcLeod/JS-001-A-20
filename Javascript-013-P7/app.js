@@ -54,7 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     aliennInvaders[i] += direction
   }
   for (let i = 0; i <= alienInvaders.length -1; i++){
-    squares[aleinInvaders[i]].classList.remove("invader")
+    if (!alienInvadersTakendown.includes(i)) {
+    squares[aleinInvaders[i]].classList.add("invader")
+    }
   }
   // decide a game over
   if (squares[currentShooterIndex].classList.contains("invader", "shooter")){
@@ -96,8 +98,13 @@ document.addEventListener("DOMContentLoaded", () => {
       if (currenLaserIndex < width){
         clearInterval(laserId)
         setTimeout(() => squares[currentLaserIndex].classList.remove("laser"), 100)
-          
-        
+                 
       }
     }
+    document.addEventListener("keyup", e => {
+      if (e.keycode === 32) {
+        laserId = setInterval(moveLaser, 100)
+      }
+    })
   }
+document.addEventListener("keyup",  shoot)
