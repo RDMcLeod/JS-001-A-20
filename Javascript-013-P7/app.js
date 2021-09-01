@@ -1,17 +1,24 @@
-document.addEventListener("DOMContentLoaded", () => {
   const squares = document.querySelectorAll("grid div");
   const resultDisplay = document.querySelector("results");
   let width = 15;
-  let currentShooterIndex = 202;
-  let currentInvaderIndex = 0;
-  let alienInvadersTakendown = [];
-  let result = 0;
-  let direction = 1;
+  let direction = 1
+  let invadersId
+  let goingRight = true
+  let aliensRemoved = []
+  let results = 0
+
+  for (let i = 0; i < 225; i++){
+    const square = document.createElement("div")
+    grid.appendChild(square)
+  }
+
+
+
 
   //define the alien invaders
   const alienInvaders = [
     1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21,
-    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39,
+    22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39
   ];
   // draw the alien invaders
   alienInvaders.forEach((invader) =>
@@ -87,7 +94,7 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[currentLaserIndex].classList.remove("laser")
       currentLaserIndex -= width
       squares[currentLaserIndex].classList.add("laser")
-      if (squares[cirrentLaserIndex].classList.contains("invader")){
+      if (squares[currentLaserIndex].classList.contains("invader")){
         squares[currentLaserIndex].classList.remove("laser")
         squares[currentLaserIndex].classList.remove("Invader")
         squares[currentLaserIndex].classList.add("boom")
@@ -117,4 +124,5 @@ document.addEventListener("DOMContentLoaded", () => {
         break
     }
   }
-document.addEventListener("keyup",  shoot)
+document.addEventListener("keyup", shoot)
+
