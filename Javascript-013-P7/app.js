@@ -70,6 +70,11 @@ document.addEventListener("DOMContentLoaded", () => {
       clearInterval(InvaderId)
     }
    }
+   // decide a win
+   if (alienInvadersTakendown.length === alienInvaders.length){
+     resultDisplay.textContent = "You Win"
+     clearInterval
+   }
   }
   invaderId = setInterval(moveInvaders, 500)
 
@@ -82,7 +87,7 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[currentLaserIndex].classList.remove("laser")
       currentLaserIndex -= width
       squares[currentLaserIndex].classList.add("laser")
-      if (squares[cirrentLaserIndex].contains(invader)){
+      if (squares[cirrentLaserIndex].classList.contains("invader")){
         squares[currentLaserIndex].classList.remove("laser")
         squares[currentLaserIndex].classList.remove("Invader")
         squares[currentLaserIndex].classList.add("boom")
@@ -101,10 +106,15 @@ document.addEventListener("DOMContentLoaded", () => {
                  
       }
     }
-    document.addEventListener("keyup", e => {
-      if (e.keycode === 32) {
-        laserId = setInterval(moveLaser, 100)
-      }
-    })
+    //document.addEventListener("keyup", e => {
+    //if (e.keycode === 32) {
+    //laserId = setInterval(moveLaser, 100)
+    //  }
+    //})
+    switch(e.keycode){
+      case 32:
+        laserId = setInterval(moveLaser,100)
+        break
+    }
   }
 document.addEventListener("keyup",  shoot)
