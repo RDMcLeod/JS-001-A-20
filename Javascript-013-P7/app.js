@@ -13,7 +13,7 @@
   }
 
 
-
+  const squares = Array.from(document.querySelectorAll('.grid div'))
 
   //define the alien invaders
   const alienInvaders = [
