@@ -31,9 +31,11 @@
   draw()
 
   // draw the alien invaders
-  alienInvaders.forEach((invader) =>
-    squares[currentInvaderIndex + invader].clasList.add("invader")
-  );
+  function remove() {
+  for (let i = 0; i < alienInvaders.length; i++) {
+    squares[alienInvaders[i]].classList.remove('invader')
+  }
+}
 
   // draw the shooter
   squares[currentShooterIndex].classList.add("shooter");
