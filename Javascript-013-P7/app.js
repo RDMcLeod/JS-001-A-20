@@ -1,5 +1,6 @@
-const squares = document.querySelectorAll("grid div");
-const resultDisplay = document.querySelector("results");
+const squares = document.querySelector(".grid");
+const resultDisplay = document.querySelector(".results");
+let currentShooterIndex = 202;
 let width = 15;
 let direction = 1;
 let invadersId;
@@ -119,17 +120,17 @@ function shoot(e) {
       );
       clearInterval(laserId);
 
-      const alienTakenDown = alienInvaders.indexOf(currentLaserIndex);
-      alienInvadersTakendown.push(alienTakenDown);
+      const alienRemoved = alienInvaders.indexOf(currentLaserIndex);
+      aliensRemoved.push(alienRemoved);
       results++;
-      resultsDisplay.textContent = results;
+      resultsDisplay.innerHTML = results;
       console.log(aliensRemoved);
     }
   }
 
-  switch (e.keycode) {
+  switch (e.key) {
     case "ArrowUp":
       laserId = setInterval(moveLaser, 100);
   }
 }
-document.addEventListener("keyup", shoot);
+document.addEventListener("keydown", shoot);
