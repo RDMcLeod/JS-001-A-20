@@ -37,3 +37,22 @@ function moveFrog (e) {
     lose()
     win()
 })
+
+// move cars
+function autoMoveCars () {
+  carsLeft.forEach(carLeft => moveCarLeft(carLeft))
+  carsRight.forEach(carRight => moveCarRight (carRight))  
+}
+//move car left on time loop
+
+function moveCarLeft () {
+  switch (true){
+      case carLeft.classList.contains("c1"):
+       carLeft.classList.remove("c1")
+       carsLeft.classList.add("c2")
+       break
+      case carLeft.classList.contains("c2"):
+       carLeft.classList.remove("cc2")
+       carsLeft.classList.add("c3")
+  }
+}
