@@ -12,8 +12,15 @@ let currentIndex = 76;
 let currentTime = 20;
 let timerId;
 
+//render frog on starting block
+squares[currentIndex].classList.add("frog")
+
 // moving the frog
 
 function moveFrog (e {
-    
+    squares[currentIndex].classList.remove("frog")
+    switch (e.keycode) {
+        case 37:
+        if(currentIndex % width !== 0 currentIndex -=1)
+    }
 })
