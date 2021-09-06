@@ -78,3 +78,8 @@ function moveCarRight (carRight) {
        break
   }
 }
+// move the logs
+function autoMoveLogs() {
+    logsLeft.forEach(logLeft => moveLogLeft(logLeft))
+    logsRight.forEach(logRight => moveLogRight(logRight))
+  }
