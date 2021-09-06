@@ -52,7 +52,12 @@ function moveCarLeft () {
        carsLeft.classList.add("c2")
        break
       case carLeft.classList.contains("c2"):
-       carLeft.classList.remove("cc2")
+       carLeft.classList.remove("c2")
        carsLeft.classList.add("c3")
+       break
+      case carLeft.classList.contains("c3"):
+       carLeft.classList.remove("c3")
+       carsLeft.classList.add("c1")
+       break
   }
 }
