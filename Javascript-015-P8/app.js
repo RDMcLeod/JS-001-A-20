@@ -45,8 +45,8 @@ function autoMoveCars () {
 }
 //move car left on time loop
 
-function moveCarLeft () {
-  switch (true){
+function moveCarLeft (carLeft) {
+  switch (true) {
       case carLeft.classList.contains("c1"):
        carLeft.classList.remove("c1")
        carsLeft.classList.add("c2")
@@ -58,6 +58,23 @@ function moveCarLeft () {
       case carLeft.classList.contains("c3"):
        carLeft.classList.remove("c3")
        carsLeft.classList.add("c1")
+       break
+  }
+}
+// move the car right on the time loop
+function moveCarRight (carRight) {
+  switch (true) {
+      case carRight.classList.contains("c1"):
+       carRight.classList.remove("c1")
+       carRight.classList.add("c3")
+       break
+      case carRight.classList.contains("c2"):
+       carRight.classList.remove("c2")
+       carRight.classList.add("c1")
+       break
+      case carRight.classList.contains("c3"):
+       carRight.classList.remove("c3")
+       carRight.classList.add("c2")
        break
   }
 }
