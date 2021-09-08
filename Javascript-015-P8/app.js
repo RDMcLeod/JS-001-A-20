@@ -133,3 +133,12 @@ function autoMoveLogs() {
       break
     }
   }
+  // rules to win frogger
+  function win() {
+    if (squares[4].classList.contains("frog")) {
+      result.innerHTML = "YOU WIN"
+      squares [currentIndex].classList.remove("frog")
+      clearInterval(timerId)
+      document.removeEventListener("keyup", moveFrog)
+    }
+  }
