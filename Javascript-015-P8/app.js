@@ -142,3 +142,15 @@ function autoMoveLogs() {
       document.removeEventListener("keyup", moveFrog)
     }
   }
+  //rules for frog to lose
+  function lose() {
+    if ((currentTime === 0 ) || (squares[currentIndex].classList.contains('c1')) 
+    || (squares[currentIndex].classList.contains('l5'))
+    || (squares[currentIndex].classList.contains('l4'))
+    ) {
+      result.innerHTML = 'You LOSE'
+      squares[currentIndex].classList.remove('frog')
+      clearInterval(timerId)
+      document.removeEventListener('keyup', moveFrog)
+    }
+  }
