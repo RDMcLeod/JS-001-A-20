@@ -172,3 +172,11 @@ function moveWithLogRight() {
     squares[currentIndex].classList.add("frog");
   }
 }
+// all the functions that move the pieces
+function movePieces() {
+  autoMoveCars();
+  autoMoveLogs();
+  moveWithLogLeft();
+  moveWithLogRight();
+  lose();
+}
