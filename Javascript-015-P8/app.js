@@ -174,6 +174,8 @@ function moveWithLogRight() {
 }
 // all the functions that move the pieces
 function movePieces() {
+  currentTime--;
+  timeLeft.textContent = currentTime;
   autoMoveCars();
   autoMoveLogs();
   moveWithLogLeft();
