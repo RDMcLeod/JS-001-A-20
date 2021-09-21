@@ -48,5 +48,10 @@ document.addEventListener("DOMContentLoaded", () => {
   let currentRotation = 0;
   let current = theTetrominos[random][currentRotation];
 
-  //move the tetromino down
+  //draw the shape
+  function draw() {
+    current.forEach((index) =>
+      squares[currentPosition + index].classList.add("block")
+    );
+  }
 });
