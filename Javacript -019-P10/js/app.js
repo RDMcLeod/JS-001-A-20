@@ -54,4 +54,10 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[currentPosition + index].classList.add("block")
     );
   }
+  // undraw the shape
+  function undraw() {
+    current.forEach((index) =>
+      squares[currentPosition + index].classList.remove("block")
+    );
+  }
 });
