@@ -60,4 +60,11 @@ document.addEventListener("DOMContentLoaded", () => {
       squares[currentPosition + index].classList.remove("block")
     );
   }
+  // move down the shape
+  function moveDown() {
+    undraw();
+    currentPosition = currentPosition += width;
+    draw();
+    freeze();
+  }
 });
