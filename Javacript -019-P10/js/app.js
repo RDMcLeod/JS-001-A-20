@@ -74,10 +74,20 @@ document.addEventListener("DOMContentLoaded", () => {
       (index) => (currentPosition + index) % width === width - 1
     );
     if (!isAtRightEdge) currentPosition + -1;
-    if (current.some((index) => 
+    if (
+      current.some((index) =>
         squares[currentPosition + index].classList.contains("block2")
       )
     ) {
+      currentPosition -= 1;
     }
+    draw();
+  }
+
+  function moveLeft() {
+    undraw();
+    const isAtLeftEdge = current.some(
+      (index) => (currentPosition + index) % width === 0
+    );
   }
 });
