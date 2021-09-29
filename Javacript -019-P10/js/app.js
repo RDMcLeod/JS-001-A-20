@@ -13,8 +13,11 @@ document.addEventListener("DOMContentLoaded", () => {
       rotate();
     } else if (e.Keycode === 37) {
       moveLeft();
+    } else if (e.Keycode === 40) {
+      moveDown();
     }
   }
+  document.addEventListener(keyup, control);
 
   // tetrominoes
   const lTetromino = [
