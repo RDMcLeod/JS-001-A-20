@@ -5,6 +5,17 @@ document.addEventListener("DOMContentLoaded", () => {
   const height = 20;
   let currentPosition = 4;
 
+  // assign functions to keycodes
+  function control(e) {
+    if (e.keycode === 39) {
+      moveRight();
+    } else if (e.Keycode === 38) {
+      rotate();
+    } else if (e.Keycode === 37) {
+      moveLeft();
+    }
+  }
+
   // tetrominoes
   const lTetromino = [
     [1, width + 1, width * 2 + 1, 2],
@@ -97,6 +108,16 @@ document.addEventListener("DOMContentLoaded", () => {
     ) {
       currentPosition += 1;
     }
+    draw();
+  }
+  // rotate Tetromino
+  function rotate() {
+    undraw();
+    currentRotation++;
+    if (currentRotation === current.length) {
+      currentRotation = 0;
+    }
+    current = theTetrominos[random][currentRotation];
     draw();
   }
 });
