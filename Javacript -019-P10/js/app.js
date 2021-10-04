@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const grid = document.querySelector("grid");
+  const displaySquares = document.querySelector(".previous-grid div");
   let squares = Array.from(grid.querySelectorAll("div"));
   const width = 10;
   const height = 20;
@@ -123,4 +124,9 @@ document.addEventListener("DOMContentLoaded", () => {
     current = theTetrominos[random][currentRotation];
     draw();
   }
+  // show previous tetromino is displaySquares
+  const displayWidth = 4;
+  const displayIndex = 0;
+
+  const smallTetrominoes = [[1, diplayWidth + 1, displayWidth * 2 + 1, 2]];
 });
