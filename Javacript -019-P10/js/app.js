@@ -128,5 +128,16 @@ document.addEventListener("DOMContentLoaded", () => {
   const displayWidth = 4;
   const displayIndex = 0;
 
-  const smallTetrominoes = [[1, diplayWidth + 1, displayWidth * 2 + 1, 2]];
+  const smallTetrominoes = [
+    [1, diplayWidth + 1, displayWidth * 2 + 1, 2] /*lTetromino*/,
+    [0, diplayWidth, displayWidth + 1, displayWidth * 2 + 1] /*zTetromino*/,
+    [1, diplayWidth, displayWidth + 1, displayWidth + 2] /*tTetromino*/,
+    [0, 1, displayWidth, displayWidth + 1] /*oTetromino*/,
+    [
+      1,
+      displayWidth + 1,
+      displayWidth * 2 + 1,
+      displayWidth * 3 + 1,
+    ] /*iTetromino*/,
+  ];
 });
