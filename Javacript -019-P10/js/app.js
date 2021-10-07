@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const width = 10;
   const height = 20;
   let currentPosition = 4;
+  let nextRandom = 0;
 
   // assign functions to keycodes
   function control(e) {
@@ -150,4 +151,17 @@ document.addEventListener("DOMContentLoaded", () => {
       displaysquares[displayIndex + index].classList.add("block");
     });
   }
+  // freeze the shape
+  function freeze()
+  if(current.some(index => squares[currentPosition + index + width].classList.contains("block3")
+  || squares[currentPosition + index + width].classList.contains("block2"))) {
+    current.forEach(index => squares[index + currentPosition].classList.add("block2"))
+
+    random = nextRandom
+    nextRandom = Math.floor(Math.random ()* theTetrominoes.length)
+    current = theTetrominoes[random][currentPosition]
+    currentPosition = 4
+
+  }
+
 });
