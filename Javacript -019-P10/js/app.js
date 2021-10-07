@@ -1,11 +1,17 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const grid = document.querySelector("grid");
+  const startBtn = document.querySelector("button");
+  const grid = document.querySelector(".grid");
+  const scoreDisplay = document.querySelector(".score-display");
+  const linesDisplay = document.querySelector(".lines-display");
   const displaySquares = document.querySelector(".previous-grid div");
   let squares = Array.from(grid.querySelectorAll("div"));
   const width = 10;
   const height = 20;
   let currentPosition = 4;
-  let nextRandom = 0;
+  let currentIndex = 0
+  let timerId;
+  let score = 0
+  let lines = 0
 
   // assign functions to keycodes
   function control(e) {
@@ -161,7 +167,51 @@ document.addEventListener("DOMContentLoaded", () => {
     nextRandom = Math.floor(Math.random ()* theTetrominoes.length)
     current = theTetrominoes[random][currentPosition]
     currentPosition = 4
+    draw()
+    displayShape()
+    gameOver()
+    addScore()
 
   }
 
 });
+startBtn.addEventListener("click", () => {
+  if(timerId) {
+    clearInterval(timerId)
+    timerId = null
+  }else {
+    draw()
+    timerId = setInterval(moveDown, 1000)
+    nextRandom = Math.floor(Math.random()*theTetrominoes.length)
+    displayShape()
+
+  }
+})
+// game over
+function gameOver(){
+  if(current.some
+    (index => squares[currentPosition + index].classList.contains("block2"))){
+      scoreDisplay.innerHTML = "end"
+      clearInterval(timerId)
+    }
+}
+// add score
+function addScore() {
+   for (currentIndex = 0; currentIndex < 199; currentIndex += width){
+     const row = [ currentIndex, currentIndex + 1, currentIndex+2, currentIndex +3, currentIndex +4, currentIndex +5, currentIndex +6, currentIndex +7, currentIndex +8, currentIndex +9]
+
+     if(row.every(index => squares[index].classList.contains("2"))) {
+       score += 10
+       lines += 1
+       scoreDisplay.innerHTML = score
+       linesDisplay.innerHTML = lines
+       row.forEach (index =>  {
+         sqaures[index].classList.remove("block2") || squares [index].classList.remove("block")
+       })
+       // splice 
+       const squaresRemoved = sqaures.splce(currentIndex, width)
+       squares = squaresRemoved.concat(squares)
+       squares.forEach(cell => grid.appendChild(cell))
+     }
+   }
+}
