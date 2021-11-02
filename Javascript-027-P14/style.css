@@ -38,3 +38,17 @@ img {
   height: 20px;
   margin: 0;
 }
+.card-excerpt {
+  color: #777;
+  margin: 10px 0 20px;
+}
+.author {
+  display: flex;
+}
+
+.profile-img {
+  border-radius: 50%;
+  overflow: hidden;
+  height: 40px;
+  width: 40px;
+}
