@@ -66,12 +66,18 @@ function loadQuiz() {
   d_text.innerText = currentQuizData.d;
 }
 function getSelected() {
-    let answer = undefined;
+  let answer = undefined;
 
-    answerEls.forEach((answerEl) => {
-        if (answerEl.checked) {
-            answer = answerEl.id;
-        }
-    });
+  answerEls.forEach((answerEl) => {
+    if (answerEl.checked) {
+      answer = answerEl.id;
+    }
+  });
 
-    return answer;
+  return answer;
+}
+function deselectAnswers() {
+  answerEls.forEach((answerEl) => {
+    answerEl.checked = false;
+  });
+}
