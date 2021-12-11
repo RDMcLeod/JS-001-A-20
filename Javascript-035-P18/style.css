@@ -53,6 +53,7 @@ header button {
 }
 .fav-meals {
   display: flex;
+  overflow: auto;
   list-style-type: none;
   padding: 0;
 }
@@ -61,12 +62,13 @@ header button {
 }
 
 .fav-meals li img {
-  border: 2px solid;
+  border: 2px solid #ffffff;
   border-radius: 50%;
+  box-shadow: 0 0 10px 2px #3333331a;
   object-fit: cover;
   height: 70px;
   width: 70px;
 }
 .fav-meals li span {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
 }
