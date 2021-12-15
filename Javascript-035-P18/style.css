@@ -86,14 +86,20 @@ header button {
 
 .meal-header .random {
   position: absolute;
-  top: 1rem;
+  top: 10px;
   background-color: #fff;
   padding: 0.25rem 1rem;
   border-top-right-radius: 3px;
   border-bottom-right-radius: 3px;
 }
 .meal-header img {
+  object-fit: cover;
+  height: 300px;
+  width: 100%;
 }
 
 .meal-body {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
