@@ -22,8 +22,18 @@ body {
   justify-content: flex-end;
   padding: 0.5rem;
 }
-.notes .tools .button {
+.notes .tools button {
   background-color: transparent;
   border: none;
   color: #fff;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+.notes .main {
+  height: 100%;
+  width: 100%;
+}
+.notes textarea {
+  height: 100%;
+  width: 100%;
 }
