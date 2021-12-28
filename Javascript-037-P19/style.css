@@ -30,15 +30,17 @@ body {
   margin-left: 0.5rem;
 }
 .notes .main {
-  display: none;
   height: 100%;
   width: 100%;
 }
 .notes textarea {
-  display: none;
   outline: none;
   font-family: inherit;
+  font-size: 1.2rem;
   border: none;
   height: 100%;
   width: 100%;
+}
+.notes .hidden {
+  display: none;
 }
