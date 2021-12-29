@@ -15,3 +15,12 @@ textArea.addEventListener("input", (e) => {
 
   main.innerHTML = marked(value);
 });
+
+//<div class="notes">
+//    <div class="tools">
+//<button class="edit"><i class="fas fa-edit"> </i></button>
+//   <button class="delete"><i class="fas fa-trash-alt"></i></button>
+//</div>
+//<div class="main hidden">
+// <textarea></textarea>
+// </div>
