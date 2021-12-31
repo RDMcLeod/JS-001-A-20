@@ -3,20 +3,20 @@ const addBtn = document.getElementById("add");
 const notes = JSON.parse(localStorage.getItem("notes"));
 
 if (notes) {
-    notes.forEach((note) => {
-        addNewNote(note);
-    });
+  notes.forEach((note) => {
+    addNewNote(note);
+  });
 }
 
 addBtn.addEventListener("click", () => {
-    addNewNote();
+  addNewNote();
 });
 
 function addNewNote(text = "") {
-    const note = document.createElement("div");
-    note.classList.add("note");
+  const note = document.createElement("div");
+  note.classList.add("note");
 
-    note.innerHTML = `
+  note.innerHTML = `
         <div class="notes">
             <div class="tools">
                 <button class="edit"><i class="fas fa-edit"></i></button>
@@ -27,18 +27,18 @@ function addNewNote(text = "") {
         </div>
     `;
 
+  const editBtn = document.querySelector(".edit");
+  const deleteBtn = document.querySelector(".delete");
 
-const editBtn = document.querySelector(".edit");
-const deleteBtn = document.querySelector(".delete");
+  const main = note.querySelector(".main");
+  const textArea = note.querySelector("textarea");
 
-const main = notesEl.querySelector("main");
-const textArea = notesEl.querySelector("textarea");
+  editBtn.addEventListener("click", () => {
+    main.classList.toggle("hidden");
+    textArea.classList.toggle("hidden");
+  });
 
-editBtn.addEventListener("click", () => {
-  main.classList.toggle("hidden");
-  textArea.classList.toggle("hidden");
-});
-
-textArea.addEventListener("input", (e) => {
-  const { value } = e.target;
+  textArea.addEventListener("input", (e) => {
+    const { value } = e.target;
+  });
 }
