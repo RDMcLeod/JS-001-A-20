@@ -4,57 +4,13 @@
   box-sizing: border-box;
 }
 body {
-  background-color: #7bdaf3;
-  display: flex;
-  flex-wrap: wrap;
+  background-color: #f5f5f5;
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
-
-.add {
-  background-color: #9ec862;
-  border-radius: 3px;
-  border: none;
-  color: white;
-  padding: 0.5rem 1rem;
-  position: fixed;
-  top: 1rem;
-  right: 1rem;
-}
-
-.notes {
-  background-color: #fff;
-  margin: 20px;
-  height: 400px;
-  width: 500px;
-}
-.notes .tools {
-  background-color: #9ec862;
-  display: flex;
-  justify-content: flex-end;
-  padding: 0.5rem;
-}
-.notes .tools button {
-  background-color: transparent;
-  border: none;
-  color: #fff;
-  font-size: 1rem;
-  margin-left: 0.5rem;
-}
-.notes .main {
-  background-color: #fff;
-  overflow: hidden;
-  height: 400px;
-  width: 100%;
-}
-.notes textarea {
-  outline: none;
-  font-family: inherit;
-  font-size: 1.2rem;
-  border: none;
-  height: 100%;
-  width: 100%;
-}
-.notes .hidden {
-  display: none;
+h1 {
+  color: rebeccapurple;
+  font-size: 10rem;
+  text-align: center;
+  opacity: 0.4;
 }
