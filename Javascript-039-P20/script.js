@@ -29,3 +29,15 @@ function AddTodo() {
     input.value = "";
   }
 }
+function updateLS() {
+  const notesEl = document.querySelectorAll("li");
+
+  const notes = [];
+
+  notesEl.forEach((noteEl) => {
+    notes.push({
+      text: noteEl.innerText,
+      completed: noteEl.classList.contains("completed"),
+    });
+  });
+}
