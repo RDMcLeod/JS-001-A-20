@@ -30,14 +30,15 @@ function AddTodo() {
   }
 }
 function updateLS() {
-  const notesEl = document.querySelectorAll("li");
+  const todosEl = document.querySelectorAll("li");
 
-  const notes = [];
+  const todos = [];
 
-  notesEl.forEach((noteEl) => {
-    notes.push({
-      text: noteEl.innerText,
-      completed: noteEl.classList.contains("completed"),
+  todosEl.forEach((todoEl) => {
+    todos.push({
+      text: todoEl.innerText,
+      completed: todoEl.classList.contains("completed"),
     });
   });
+  localStorage.setItem("todos", JSON.stringify(todos));
 }
