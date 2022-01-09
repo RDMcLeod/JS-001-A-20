@@ -1,66 +1,18 @@
-const form = document.getElementById("form");
-const input = document.getElementById("input");
-const todosUL = document.getElementById("todos");
+const APIURL =
+  "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
 
-const todos = JSON.parse(localStorage.getItem("todos"));
+const IMGPATH = "https://image.tmdb.org/t/p/w1280";
 
-if (todos) {
-  todos.foreach((todo) => {
-    AddTodo(todo);
-  });
-}
+const SEARCHAPI =
+  "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
-form.addEventListener("submit", (e) => {
-  e.preventDefault();
+async function getMovies() {
+  const resp = await fetch(APIURL);
+  const respData = await resp.json();
 
-  AddTodo();
-});
+  console.log(respData);
 
-function AddTodo(todo) {
-  let todoText = input.value;
+  respData.results.forEach((movie) => {});
 
-  if (todo) {
-    todoText = todo.text;
-  }
-
-  if (todoText) {
-    const todoEl = document.createElement("li");
-
-    if (todo && todo.completed) {
-      todoEl.classList.add("completed");
-    }
-    todoEl.innerText = todoText;
-
-    todoEl.addEventListener("click", () => {
-      todoEl.classList.toggle("completed");
-
-      updateLS();
-    });
-
-    todoEl.addEventListener("contextmenu", (e) => {
-      e.preventDefault();
-      todoEl.remove();
-
-      updateLS();
-    });
-
-    todosUL.appendChild(todoEl);
-
-    input.value = "";
-
-    updateLS();
-  }
-}
-function updateLS() {
-  const todosEl = document.querySelectorAll("li");
-
-  const todos = [];
-
-  todosEl.forEach((todoEl) => {
-    todos.push({
-      text: todoEl.innerText,
-      completed: todoEl.classList.contains("completed"),
-    });
-  });
-  localStorage.setItem("todos", JSON.stringify(todos));
+  return respData;
 }
