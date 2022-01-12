@@ -9,6 +9,24 @@ async function getMovies() {
 
   console.log(respData);
 
+  respData.results.forEach((movie) => {
+    const movieEl = document.createElement("div");
+    movieEl.classList.add("movie");
+
+    movieEl.innerHTML = `
+      <div class="movie">
+        <img
+          src="https://image.tmdb.org/t/p/w1280/TnOeov4W0sTtV2gqICqIxVi74V.jpg"
+          alt=""
+        />
+        <div class="movie-info">
+          <h3>Movie Title</h3>
+          <span>8.4</span>
+        </div>
+      </div>
+    `;
+  });
+
   return respData;
 }
 getmovies();
