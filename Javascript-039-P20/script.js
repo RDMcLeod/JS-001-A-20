@@ -10,23 +10,24 @@ async function getMovies() {
   console.log(respData);
 
   respData.results.forEach((movie) => {
+    const { poster_path, title, vote_average } = movie;
+
     const movieEl = document.createElement("div");
     movieEl.classList.add("movie");
 
     movieEl.innerHTML = `
-      <div class="movie">
+      < class="movie">
         <img
-          src="https://image.tmdb.org/t/p/w1280/TnOeov4W0sTtV2gqICqIxVi74V.jpg"
-          alt=""
+          src="${IMGPATH + poster_path}"
+          alt="${title}"
         />
         <div class="movie-info">
-          <h3>Movie Title</h3>
-          <span>8.4</span>
+          <h3>${title}</h3>
+          <span>${vote_average}</span>
         </div>
-      </div>
-    `;
+      `;
   });
 
   return respData;
 }
-getmovies();
+getMovies();
