@@ -8,6 +8,11 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
 }
+
+main {
+  display: flex;
+}
+
 .movie {
   background-color: #373b69;
   border-radius: 3px;
@@ -21,9 +26,10 @@ body {
 .movie-info {
   color: #eee;
   display: flex;
+  align-items: center;
   justify-content: space-between;
   padding: 0.5rem 1rem 1rem;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
 }
 .movie-info h3 {
   margin: 0;
