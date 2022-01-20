@@ -4,6 +4,13 @@ const ctx = canvas.getContext("2d");
 
 let size = 20;
 
+canvas.addEventListener("mousedown", () => {
+  isPressed = true;
+});
+canvas.addEventListener("mouseup", () => {
+  isPressed = false;
+});
+
 canvas.addEventListener("mousemove", (e) => {
   const x = e.offsetX;
   const y = e.offsetY;
