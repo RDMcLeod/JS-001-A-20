@@ -28,20 +28,19 @@ function drawCircle(x, y) {
   ctx.arc(x, y, size, 0, Math.PI * 2);
   ctx.fill();
 }
-increaseBtn.addEventListener('click', () => {
+increaseBtn.addEventListener("click", () => {
   size += 5;
-  if (size . 50) {
+  if (size > 50) {
     size = 50;
   }
 });
 
 decreaseBtn.addEventListener("click", () => {
-
+  size += 5;
+  if (size < 5) {
+    size = 5;
+  }
 });
-
-
-
-
 
 //function draw() {
 //  ctx.clearRect(0, 0, canvas.width, canvas.height);
