@@ -26,5 +26,6 @@ canvas {
   background-color: #fff;
   border: none;
   font-size: 2rem;
-  padding: 0.5rem;
+  padding: 0.25rem;
+  width: 50px;
 }
