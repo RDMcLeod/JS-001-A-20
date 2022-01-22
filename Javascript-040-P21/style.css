@@ -15,17 +15,21 @@ body {
   min-height: 100vh;
 }
 canvas {
-  border: 1px solid #111;
+  border: 1px solid rebeccapurple;
 }
 .toolbox {
   background-color: rebeccapurple;
   padding: 1rem;
   width: 800px;
 }
-.toolbox button {
+.toolbox > * {
   background-color: #fff;
   border: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-size: 2rem;
   padding: 0.25rem;
+  height: 50px;
   width: 50px;
 }
