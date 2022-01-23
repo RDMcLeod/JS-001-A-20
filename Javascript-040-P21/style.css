@@ -19,8 +19,9 @@ canvas {
 }
 .toolbox {
   background-color: rebeccapurple;
+  border: 1px solid rebeccapurple;
   padding: 1rem;
-  width: 800px;
+  width: 804px;
 }
 .toolbox > * {
   background-color: #fff;
