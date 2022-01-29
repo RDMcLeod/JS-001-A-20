@@ -10,23 +10,29 @@
   <body>
     <div class="pw-container">
       <div class="pw-header">
-        <div class="pw"></div>
+        <div class="pw">
+          <button>Copy to ClipBoard</button>
+        </div>
       </div>
       <div class="pw-body">
         <div class="form-control">
-          <label for="upper"></label>
+          <label for="Length">Password Length</label>
+          <input id="Length" type="number" min="4" max="40" />
+        </div>
+        <div class="form-control">
+          <label for="upper">Contain Uppercase Letters</label>
           <input id="upper" type="checkbox" />
         </div>
         <div class="form-control">
-          <label for="lower"></label>
+          <label for="lower">Contain Lowercase Letters</label>
           <input id="lower" type="checkbox" />
         </div>
         <div class="form-control">
-          <label for="number"></label>
+          <label for="number">Contain Numbers</label>
           <input id="number" type="checkbox" />
         </div>
         <div class="form-control">
-          <label for="symbol"></label>
+          <label for="symbol">Contain Symbols</label>
           <input id="symbol" type="checkbox" />
         </div>
       </div>
