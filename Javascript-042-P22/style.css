@@ -15,12 +15,24 @@ body {
 }
 .pw-container {
   background-color: rgb(46, 12, 80);
-  width: 400px;
+  width: 300px;
 }
 .pw-header {
-  background-color: rebeccapurple;
   padding: 1rem;
 }
+.pw {
+  background-color: rebeccapurple;
+  display: flex;
+  align-items: center;
+  height: 70px;
+  width: 100%;
+  position: relative;
+}
+
+.pw button {
+  position: relative;
+}
+
 .pw-body {
   padding: 1rem;
 }
