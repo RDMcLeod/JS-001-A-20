@@ -15,7 +15,7 @@ body {
 }
 .pw-container {
   background-color: rgb(46, 12, 80);
-  width: 300px;
+  width: 400px;
 }
 .pw-header {
   padding: 1rem;
@@ -23,14 +23,23 @@ body {
 .pw {
   background-color: rebeccapurple;
   display: flex;
+  font-size: 2rem;
   align-items: center;
   height: 70px;
   width: 100%;
   position: relative;
+  padding: 1rem;
 }
 
 .pw button {
-  position: relative;
+  background-color: rgb(29, 2, 56);
+  border: none;
+  color: white;
+  padding: 0.25rem 0.5rem;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 50%);
 }
 
 .pw-body {
