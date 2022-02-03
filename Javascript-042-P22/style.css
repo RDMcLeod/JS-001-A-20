@@ -37,19 +37,26 @@ body {
   color: rgb(29, 2, 56);
   cursor: pointer;
   font-family: inherit;
+  font-weight: bold;
   padding: 0.25rem;
   position: absolute;
   top: 0;
   right: 0;
-  transform: translate(0, -80%);
-  transition: opacity 0.2s ease;
+  transform: translate(0, -50%);
+  transition: opacity 0.2s ease, transform 0.2s ease;
   opacity: 0;
 }
 
 .pw:hover button {
   opacity: 1;
+  transform: translate(0, -80%);
 }
 
 .pw-body {
   padding: 1rem;
+}
+.form-control {
+  display: flex;
+  justify-content: space-between;
+  margin: 0.5rem 0;
 }
