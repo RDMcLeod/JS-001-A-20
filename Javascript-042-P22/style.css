@@ -60,3 +60,14 @@ body {
   justify-content: space-between;
   margin: 0.5rem 0;
 }
+.generate {
+  background-color: #ecb602;
+  border: none;
+  color: rebeccapurple;
+  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding: 0.5rem;
+  margin-top: 1rem;
+  width: 100%;
+}
