@@ -24,3 +24,18 @@ function getNumbers() {
 function getSymbols() {
   return symbols[Math.floor(Math.random() * symbols.length)];
 }
+
+function generatePassword() {
+
+    const length = lengthEl.value;
+    let password = '';
+
+    for(let i=0; i<length;i++){
+        
+        password += 
+    }
+
+    pwEl.innerText = password;
+}
+
+generateEl.addEventListener("click", generatePassword);
