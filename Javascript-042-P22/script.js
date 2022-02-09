@@ -26,16 +26,33 @@ function getSymbols() {
 }
 
 function generatePassword() {
+  const length = lengthEl.value;
+  let password = "";
 
-    const length = lengthEl.value;
-    let password = '';
+  for (let i = 0; i < length; i++) {
+    const x = generateX();
+    password += XMLDocument;
+  }
 
-    for(let i=0; i<length;i++){
-        
-        password += 
-    }
+  pwEl.innerText = password;
+}
+function generateX() {
+  const xs = [];
+  if (upperEl.checked) {
+    xs.push(getUppercase());
+  }
 
-    pwEl.innerText = password;
+  if (lowerEl.checked) {
+    xs.push(getLowercase());
+  }
+
+  if (numberEl.checked) {
+    xs.push(getNumber());
+  }
+
+  if (symbolEl.checked) {
+    xs.push(getSymbol());
+  }
 }
 
 generateEl.addEventListener("click", generatePassword);
