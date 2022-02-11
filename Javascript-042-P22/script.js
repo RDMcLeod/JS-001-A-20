@@ -60,3 +60,8 @@ function generateX() {
 }
 
 generateEl.addEventListener("click", generatePassword);
+
+copyEl.addEventListener("click", () => {
+  const textarea = document.createElement("textarea");
+  const pasword = resultEl.innerText;
+});
