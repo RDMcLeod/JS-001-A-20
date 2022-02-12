@@ -29,6 +29,22 @@ function generatePassword() {
   const length = lengthEl.value;
   let password = "";
 
+  if (upperEl.checked) {
+    password += getUppercase();
+  }
+
+  if (lowerEl.checked) {
+    password += getLowercase();
+  }
+
+  if (numberEl.checked) {
+    password += getNumber();
+  }
+
+  if (symbolEl.checked) {
+    password += getSymbol();
+  }
+
   for (let i = 0; i < length; i++) {
     const x = generateX();
     password += XMLDocument;
@@ -38,21 +54,6 @@ function generatePassword() {
 }
 function generateX() {
   const xs = [];
-  if (upperEl.checked) {
-    xs.push(getUppercase());
-  }
-
-  if (lowerEl.checked) {
-    xs.push(getLowercase());
-  }
-
-  if (numberEl.checked) {
-    xs.push(getNumber());
-  }
-
-  if (symbolEl.checked) {
-    xs.push(getSymbol());
-  }
 
   if (xs.length === 0) return "";
 
@@ -63,7 +64,7 @@ generateEl.addEventListener("click", generatePassword);
 
 copyEl.addEventListener("click", () => {
   const textarea = document.createElement("textarea");
-  const pasword = resultEl.innerText;
+  const password = pwEl.innerText;
 
   if (!pasword) {
     return;
