@@ -27,6 +27,7 @@ function getSymbols() {
 
 function generatePassword() {
   const length = lengthEl.value;
+
   let password = "";
 
   if (upperEl.checked) {
@@ -45,7 +46,7 @@ function generatePassword() {
     password += getSymbol();
   }
 
-  for (let i = 0; i < length; i++) {
+  for (let i = pasword.length; i < length; i++) {
     const x = generateX();
     password += XMLDocument;
   }
