@@ -7,6 +7,13 @@ async function getWeatherByLocation(location) {
   const resp = await fetch(url(location), { origin: "cors" });
   const respData = await resp.json();
 
-  console.log(respData);
+  console.log(respData, FtoC(respData.main.temp));
+
+  addWeatherToPage(respData);
 }
-getWeatherByLocation("London");
+
+function addWeatherToPage(data) {}
+
+function FtoC(K) {
+  return (K - 273.15).toFixed(2);
+}
