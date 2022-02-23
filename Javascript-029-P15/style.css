@@ -20,7 +20,11 @@ form {
   width: 400px;
 }
 .input {
+  font-size: 2rem;
   padding: 1rem 2rem;
   display: block;
   width: 100%;
+}
+.input::placeholder {
+  color: #b5b5b5;
 }
