@@ -15,11 +15,14 @@ h1 {
   opacity: 0.4;
 }
 form {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   margin: auto;
   max-width: 100%;
   width: 400px;
 }
 .input {
+  border: none;
+  box-shadow: ;
   font-size: 2rem;
   padding: 1rem 2rem;
   display: block;
@@ -35,6 +38,7 @@ form {
   list-style-type: none;
 }
 .todos li {
-  font-size: 2rem;
+  border-top: 1px solid #e5e5e5;
+  font-size: 1.5rem;
   padding: 1rem 2rem;
 }
