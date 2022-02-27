@@ -22,7 +22,6 @@ form {
 }
 .input {
   border: none;
-  box-shadow: ;
   font-size: 2rem;
   padding: 1rem 2rem;
   display: block;
@@ -39,6 +38,10 @@ form {
 }
 .todos li {
   border-top: 1px solid #e5e5e5;
+  cursor: pointer;
   font-size: 1.5rem;
   padding: 1rem 2rem;
+}
+.todos li.completed {
+  text-decoration: line-through;
 }
