@@ -15,6 +15,12 @@ form.addEventListener("submit", (e) => {
       todoEl.classlist.toggle("completed");
     });
 
+    todoEl.addEventListener("contextmenu", (e) => {
+      e.preventDefault();
+
+      todoEl.remove();
+    });
+
     todos.appendChild(todoEl);
 
     input.value = "";
