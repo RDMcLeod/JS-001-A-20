@@ -26,6 +26,7 @@ form {
 }
 .input {
   border: none;
+  color: #765;
   font-size: 2rem;
   padding: 1rem 2rem;
   display: block;
