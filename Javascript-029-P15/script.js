@@ -30,3 +30,14 @@ function addTodo() {
     input.value = "";
   }
 }
+function updateLS() {
+  const notesEl = document.querySelectorAll(li);
+
+  const notes = [];
+
+  notesEl.forEach((noteEl) => {
+    notes.push({
+      text: noteEl.classlist.contains("completed"),
+    });
+  });
+}
