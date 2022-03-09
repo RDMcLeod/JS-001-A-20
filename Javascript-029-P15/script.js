@@ -1,6 +1,8 @@
 const form = document.getElementById("form");
 const input = document.getElementById("input");
-const todos = document.getElementById("todos");
+const todosUL = document.getElementById("todos");
+
+const todos - JSON.parse(localStorage.getItem('todos'));
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
@@ -17,17 +19,23 @@ function addTodo() {
 
     todoEl.addEventListener("click", () => {
       todoEl.classlist.toggle("completed");
+
+      updateLS();
     });
 
     todoEl.addEventListener("contextmenu", (e) => {
       e.preventDefault();
 
       todoEl.remove();
+
+      updateLS();
     });
 
-    todos.appendChild(todoEl);
+    todosUL.appendChild(todoEl);
 
     input.value = "";
+
+    updateLS();
   }
 }
 function updateLS() {
