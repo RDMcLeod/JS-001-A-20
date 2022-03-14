@@ -31,6 +31,22 @@
   --item-min-height-md: 30rem;
 }
 /* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  /*font-size: 10px;*/
+  font-size: 62.5%;
+}
+body {
+  font-family: var(--font-family);
+  font-size: var(--font-size-sm);
+  color: var(--light-color-alt);
+  background-color: var(--primary-background-color);
+  letter-spacing: 1px;
+}
 
 /* Theme color change */
 
