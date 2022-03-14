@@ -46,9 +46,41 @@ body {
   color: var(--light-color-alt);
   background-color: var(--primary-background-color);
   letter-spacing: 1px;
+  transition: backgraound-color 0.25s, color 0.25s;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+img {
+  max-width: 100%;
+  display: block;
+}
+ul {
+  list-style: none;
+}
+input,
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background-color: transparent;
+  outline: none;
+}
+i {
+  font-size: var(--font-size-md);
 }
 
 /* Theme color change */
+body.light-theme {
+  --light-color: #fff;
+  --light-color-alt: #afb6cd;
+  --primary-background-color: #131417;
+  --secondary-background-color: #252830;
+  --hover-light-color: var(--light-color);
+  --transparent-light-color: rgba(255, 255, 255, 0.05);
+  --transparent-dark-color: rgba(0, 0, 0, 0.75);
+}
 
 /* Reusable classes */
 
