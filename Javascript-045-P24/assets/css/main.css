@@ -83,9 +83,43 @@ body.light-theme {
 }
 
 /* Reusable classes */
-
+.container {
+  max-width: 160rem;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+.place-items-center {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.screen-sm-hidden {
+  display: none;
+}
 /* Header */
-
+.header {
+  background-color: var(--secondary-background-color);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-block: 1.5rem;
+}
+.logo {
+  font-size: var(--font-size-md);
+  color: var(--light-color);
+}
+.menu {
+  position: absolute;
+  top: 8.5rem;
+  right: 1.5rem;
+}
 /* Header JavaScript Styles */
 
 /* Search */
