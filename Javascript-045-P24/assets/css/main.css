@@ -134,6 +134,19 @@ body.light-theme {
 .menu {
   flex-direction: column;
 }
+.list-link.current {
+  color: var(--light-color);
+}
+.close-menu-icon {
+  display: none;
+}
+
+.btn {
+  cursor: pointer;
+}
+.list-link.hover {
+  color: var(--light-color);
+}
 /* Header JavaScript Styles */
 
 /* Search */
