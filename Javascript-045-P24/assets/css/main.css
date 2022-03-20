@@ -122,8 +122,8 @@ body.light-theme {
   width: 23rem;
   padding: 1.5rem;
   background-color: var(--secondary-background-color);
-  /*opacity: 0;
-  transform: scale(0);*/
+  opacity: 0;
+  transform: scale(0);
   transition: opacity 0.25s ease-in;
 }
 .list {
@@ -155,7 +155,22 @@ body.light-theme {
 .light-theme.sun-icon {
   display: none;
 }
+.light-theme.moon-icon {
+  display: block;
+}
+
 /* Header JavaScript Styles */
+.header.activated {
+  box-shadow: 0 1px 0.5rem var(--transparent-light-color);
+}
+.menu.activated {
+  box-shadow: 1px 1px 1rem var(--transparent-light-color);
+  opacity: 1;
+  transform: scale(1);
+}
+.menu-toggle-icon.activated .open-menu-icon {
+  display: none;
+}
 
 /* Search */
 
