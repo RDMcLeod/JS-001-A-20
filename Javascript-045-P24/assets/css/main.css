@@ -171,7 +171,9 @@ body.light-theme {
 .menu-toggle-icon.activated .open-menu-icon {
   display: none;
 }
-
+.menu-toggle-icon.activated .close-menu-icon {
+  display: block;
+}
 /* Search */
 
 /* Form JavaScript styles */
