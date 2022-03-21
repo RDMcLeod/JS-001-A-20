@@ -1,7 +1,23 @@
 // Grab elements
+const selectElement = (selector) => {
+  const element = document.querySelector(selector);
+
+  if (element) return element;
+  throw new error(
+    `Something went wrong, make sure that ${selector} exists or is typed corectly.`
+  );
+};
 
 //Nav styles on scroll
-
+const scrollheader = () => {
+  const headerElemnt = selectElement("header");
+  if (this.scrollY >= 15) {
+    headerElement.classlist.add("activated");
+  } else {
+    headerElement.classlist.remove("activated");
+  }
+};
+window.addEventListener("scoll", scollHeader);
 // Open menu & search pop-up
 
 // Open/Close search form popup
