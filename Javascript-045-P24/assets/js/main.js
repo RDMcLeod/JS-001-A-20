@@ -12,7 +12,7 @@ const selectElement = (selector) => {
 //Nav styles on scroll
 
 const scrollheader = () => {
-  const headerElemnt = selectElement("header");
+  const headerElement = selectElement("#header");
   if (this.scrollY >= 15) {
     headerElement.classlist.add("activated");
   } else {
@@ -22,6 +22,7 @@ const scrollheader = () => {
 window.addEventListener("scroll", scrollHeader);
 
 // Open menu & search pop-up
+
 const menuToggleIcon = selectElement("menu-toggle-icon");
 
 const toggleMenu = () => {
@@ -37,6 +38,24 @@ menuToggleIcon.addEventListener("click", toggleMenu);
 // -- Close the search form popup on ESC keypress
 
 // Switch theme/add to local storage
+
+const bodyElement = document.body;
+const themeToggleBtn = selectElement("#theme-toggle-btn");
+const currentTheme = localStorage.getItem("currentTheme");
+
+if (currentTheme) {
+  bodyElement.classList.add("light-theme");
+}
+
+themeToggleBtn.addEventListener("click", () => {
+  bodyElement.classList.toggle("light-theme");
+
+  if (bodyElement.classList.contains("light-theme")) {
+    localStorage.setItem("currentTheme", "themeActive");
+  } else {
+    localStorage.removeItem("currentTheme");
+  }
+});
 
 // Check to see if there is a theme preference in local Storage, if so add the ligt theme to the body
 
