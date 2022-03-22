@@ -1,4 +1,5 @@
 // Grab elements
+
 const selectElement = (selector) => {
   const element = document.querySelector(selector);
 
@@ -9,6 +10,7 @@ const selectElement = (selector) => {
 };
 
 //Nav styles on scroll
+
 const scrollheader = () => {
   const headerElemnt = selectElement("header");
   if (this.scrollY >= 15) {
@@ -17,7 +19,8 @@ const scrollheader = () => {
     headerElement.classlist.remove("activated");
   }
 };
-window.addEventListener("scoll", scollHeader);
+window.addEventListener("scroll", scrollHeader);
+
 // Open menu & search pop-up
 const menuToggleIcon = selectElement("menu-toggle-icon");
 
@@ -28,6 +31,7 @@ const toggleMenu = () => {
 };
 
 menuToggleIcon.addEventListener("click", toggleMenu);
+
 // Open/Close search form popup
 
 // -- Close the search form popup on ESC keypress
