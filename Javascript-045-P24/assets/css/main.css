@@ -189,6 +189,28 @@ body.light-theme {
   transform: scale(0);*/
   transition: opacity 0.5s;
 }
+.form-container-inner {
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  text-align: center;
+}
+.form {
+  display: flex;
+  justify-content: center;
+}
+.form-input,
+.form-btn {
+  display: inline-block;
+  border: 2px solid var(--secondary-background-color);
+  padding: 1.5rem;
+}
+.form-input {
+  border-right: none;
+  width: 100%;
+  background-color: var(--primary-background-color);
+}
 /* Form JavaScript styles */
 
 /* Featured articles */
