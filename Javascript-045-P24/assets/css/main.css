@@ -209,7 +209,24 @@ body.light-theme {
 .form-input {
   border-right: none;
   width: 100%;
-  background-color: var(--primary-background-color);
+}
+.form-btn {
+  margin-left: -0.5rem;
+  border-left: none;
+  background-color: var(--secondary-background-color);
+  width: 8rem;
+}
+.form-note {
+  font-size: var(--font-size-xsm);
+  align-self: flex-end;
+}
+.form-close-btn {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  border: 2px solid var(--secondary-background-color);
+  width: 4rem;
+  height: 4rem;
 }
 /* Form JavaScript styles */
 
