@@ -39,7 +39,17 @@ const formOpenBtn = selectElement("#search-icon");
 const formCloseBtn = selectElement("#form-close-btn");
 const serchFormContainer = selectElement("#search-form-container");
 
+formOpenBtn.addEventListener("click", () =>
+  searchFormContainer.classlist.add("activated")
+);
+formCloseBtn.addEventListener("click", () =>
+  searchFormContainer.classlist.remove("activated")
+);
+
 // -- Close the search form popup on ESC keypress
+window.addEventListener("keyup", (event) => {
+  if (event.key === "Escape") searchFormContainer.classlist.remove("activated");
+});
 
 // Switch theme/add to local storage
 
