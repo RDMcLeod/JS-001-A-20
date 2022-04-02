@@ -96,6 +96,15 @@ body.light-theme {
 .screen-sm-hidden {
   display: none;
 }
+
+.d-grid{
+  display: grid
+}
+.sections{
+  padding-block: 5rem;
+}
+
+
 /* Header */
 .header {
   background-color: var(--secondary-background-color);
@@ -234,7 +243,13 @@ body.light-theme {
   transform: scale(1);
 }
 /* Featured articles */
+.featured-articles{
+  padding-block: 2rem;
+}
 
+.section-header-offset{
+  margin-top: 7.4rem;
+}
 /* Featured articles - Sidebar */
 
 /* Quick read */
