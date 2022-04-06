@@ -307,7 +307,7 @@ body.light-theme {
   object-fit: cover;
   transition: transform .25s;
 }
-.article-catagory{
+.article-category{
   position: absolute;
   top: 1rem;
   right: 1rem;
@@ -318,7 +318,20 @@ body.light-theme {
   text-transform: uppercase;
   z-index: 10;
 }
-
+.article-data-container{
+  position:absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem 1.5rem;
+  background-color: var(--transparent-dark-color);
+  z-index: 10;
+  width: 100%;
+  transition: backgraound-color .5s;
+}
+.article:hover .article-data-container{
+  background-color: var(--hover-dark-color);
+  color: var(--hover-light-color);
+}
 /* Featured articles - Sidebar */
 
 /* Quick read */
