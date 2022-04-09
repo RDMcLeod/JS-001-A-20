@@ -361,6 +361,22 @@ body.light-theme {
 
 /* Featured articles - Sidebar */
 
+.sidebar{
+  background-color: var(--secondary-background-color);
+  padding: 2.5rem;
+}
+.trend-news-box{
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+  padding-block: 2rem;
+  border: 1px solid --transparent-light-color;
+}
+.trending-news-box:last-of-type{
+  border-bottom: none;
+}
+
+
 /* Quick read */
 
 /* Quick read - Swiper */
