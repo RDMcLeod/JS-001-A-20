@@ -375,8 +375,28 @@ body.light-theme {
 .trending-news-box:last-of-type{
   border-bottom: none;
 }
+.trending-news-image-box{
+  position: relative;
+  width: 100%;
+  height: var(--item-min-height-sm);
+}
+.featured-content-title{
+  font-size: var(--font-size-md);
+  text-align: center;
+  padding: 1rem;
+}
+.trending-number{
+  position: absolute;
+  top: -1rem;
+  left: -1rem;
+  z-index: 15;
+  width: 3rem;
+  height: 3rem;
+  height: 3rem;
+  background-color: var(--secondary-background-color);
+  color: var(--light-color);
 
-
+}
 /* Quick read */
 
 /* Quick read - Swiper */
