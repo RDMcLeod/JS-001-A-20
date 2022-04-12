@@ -395,9 +395,17 @@ body.light-theme {
   height: 3rem;
   background-color: var(--secondary-background-color);
   color: var(--light-color);
-
+  border-radius:50%;
+}
+.trending-news-data .article-title{
+  font-size: var(--font-size-sm);
+}
+.trending-news-box:hover .article-title{
+  color: var(--light-color-alt);
 }
 /* Quick read */
+
+
 
 /* Quick read - Swiper */
 
