@@ -404,7 +404,20 @@ body.light-theme {
   color: var(--light-color-alt);
 }
 /* Quick read */
-
+.section-title{
+  position: relative;
+  font-size: var(--font-size-md);
+  margin-bottom: 6rem;
+}
+.section-title::before{
+  content: attr(data-name);
+  font-size: var(--font-size-lg);
+  text-transform: uppercase;
+  opacity: .1;
+  position: absolute;
+  top: 1.5rem;
+  left: 2rem;
+}
 
 
 /* Quick read - Swiper */
