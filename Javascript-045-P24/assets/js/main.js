@@ -78,7 +78,14 @@ themeToggleBtn.addEventListener("click", () => {
 // If the body has the class of light theme then add it to local Storage, if not remove it
 
 // Swiper
-
+const swiper = new Swiper(".swiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+});
 // How many slides to show
 
 // How much space between slides

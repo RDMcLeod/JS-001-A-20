@@ -418,9 +418,24 @@ body.light-theme {
   top: 1.5rem;
   left: 2rem;
 }
+.article.swiper-slide{
+  height: 40rem;
 
+}
 
 /* Quick read - Swiper */
+.swiper-wrapper{
+  height: auto;
+}
+.swiper-controls{
+  width: 3.5rem;
+  height: 3.5rem;
+  background-color: var(--secondary-background-color);
+}
+.swiper-controls::after{
+font-size: 1.6rem;
+color: var(--light-color);
+}
 
 /* Older posts */
 
