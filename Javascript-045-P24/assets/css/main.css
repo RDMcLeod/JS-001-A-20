@@ -436,6 +436,15 @@ body.light-theme {
 font-size: 1.6rem;
 color: var(--light-color);
 }
+.swiper-pagigination{
+  bottom:.5rem !important;
+}
+.swiper-pagigination-bullet{
+  background-color: var(--light-color);
+}
+
+
+
 
 /* Older posts */
 

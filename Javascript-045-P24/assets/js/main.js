@@ -85,6 +85,17 @@ const swiper = new Swiper(".swiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  pagination: {
+    el: ".wiper-pagination",
+  },
+  berakpoints: {
+    700: {
+      slidesPerView: 2,
+    },
+    1200: {
+      slidesPerView: 3,
+    },
+  },
 });
 // How many slides to show
 
