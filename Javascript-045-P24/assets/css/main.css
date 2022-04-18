@@ -443,11 +443,16 @@ color: var(--light-color);
   background-color: var(--light-color);
 }
 
-
-
-
 /* Older posts */
+.older-posts-grid-wrapper{
+  gap:var(--gap);
 
+}
+.older-posts-article-image-wrapper,
+.older-posts .article{
+min-height:var(--item-min-height-sm);
+
+}
 /* Popular tags */
 
 /* Newsletter */
