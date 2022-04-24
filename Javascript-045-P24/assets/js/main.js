@@ -88,7 +88,7 @@ const swiper = new Swiper(".swiper", {
   pagination: {
     el: ".wiper-pagination",
   },
-  berakpoints: {
+  breakkpoints: {
     700: {
       slidesPerView: 2,
     },
