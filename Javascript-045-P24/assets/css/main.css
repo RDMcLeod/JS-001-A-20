@@ -506,7 +506,15 @@ min-height:var(--item-min-height-sm);
 }
 
 /* Newsletter */
-
+.newsletter{
+  padding-bottom: 6rem;
+}
+.newsletter-title{
+  font-size: var(--font-size-lg);
+}
+.newsltter-description{
+  margin-bottom: 3rem;
+}
 /* Footer */
 
 /* Scrollbar styles */
