@@ -1,5 +1,7 @@
 JS-001-A-20
 
+2022-05-02 added Project Folder Javascript-048-P27
+
 2022-03-04 added Project Folder Javascript-047-P26
 
 2022-02-24 added Project Folder Javascript-046-P25
