@@ -544,7 +544,18 @@ min-height:var(--item-min-height-sm);
 }
 .footer-title{
   font-size: var(--font-size-md);
+  text-transform: uppercase;
+  margin-bottom: var(--margin-sm);
 }
+/*scrollbar styles*/
+::-webkit-scrollbar{
+  width: 1rem;
+}
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #3f4254;
 
 /* Scrollbar styles */
 
