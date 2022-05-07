@@ -560,6 +560,11 @@ body.light-theme {
   display: flex;
   flex-direction: column;
   align-items: center;
+  text-align: center;
+  padding-block:2.5em; ;
+}
+.blog-post-title{
+  font-size: clamp(3rem, 5vw, 6rem);
 }
 /* Media Queries*/
 
