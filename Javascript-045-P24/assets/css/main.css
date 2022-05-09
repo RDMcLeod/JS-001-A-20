@@ -582,9 +582,29 @@ body.light-theme {
   flex-direction: column;
   gap: var(--gap);
 }
+.quote{
+  background-color: var(--secondary-background-color);
+  padding: 2.5rem;
+}
+.quote p{
+  font-style: italic;
+}
+.quote span i{
+  font-size: 3.5rem;
+}
+.author{
+  margin-top: 5rem;
+  gap: var(--gap);
+  background-color:var(--secondary-background-color);
+}
 
-
-
+.author-image-box{
+  position: relative;
+  height: var(--item-min-height-sm);
+}
+.author-about{
+  padding: 1.5rem;
+}
 /* Media Queries*/
 
 
