@@ -604,7 +604,25 @@ body.light-theme {
 }
 .author-about{
   padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
+.author-name{
+  color: var(--light-color;
+  font-weight: 400;
+
+}
+.author p{
+  max-width: 50rem;
+  margin-bottom: 1rem;
+}
+.author-about social-media{
+  margin-top: auto;
+}
+
+
+
 /* Media Queries*/
 
 
