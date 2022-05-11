@@ -609,7 +609,7 @@ body.light-theme {
   gap: 1rem;
 }
 .author-name{
-  color: var(--light-color;
+  color: var(--light-color);
   font-weight: 400;
 
 }
