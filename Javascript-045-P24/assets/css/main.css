@@ -620,11 +620,44 @@ body.light-theme {
 .author-about social-media{
   margin-top: auto;
 }
-
-
-
 /* Media Queries*/
+@media screen and (min-width: 700px) {
 
+  .trending-news-box{
+      flex-direction: row;
+      align-items: center;
+  }
+
+  .trending-news-img-box{
+      width: 50%;
+  }
+
+  .trending-news-data{
+      margin: auto;
+      text-align: center;
+  }
+  
+  .newsletter-description{
+      max-width: 40rem;
+  }
+
+  .form-container-inner{
+      align-items: center;
+  }
+
+  .popular-tags-container,
+  .footer-container{
+      grid-template-columns: repeat(2, 1fr);
+  }
+
+  .company-data{
+      order: 0;
+  }
+
+  .author{
+      grid-template-columns: 25rem 1fr;
+  }
+}
 
 /* Scrollbar styles */
 
