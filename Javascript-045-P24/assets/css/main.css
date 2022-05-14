@@ -728,6 +728,46 @@ body.light-theme {
       animation: animate_border .75s linear infinite
   }
 }
+@keyframes animate_border{
+  to{
+      transform:translateX(-50%)
+  }
+}
+
+.featured-articles-container{
+  grid-template-columns: 1fr 40rem;
+}
+
+.trending-news-img-box{
+  width: 10rem;
+  height: 10rem;
+}
+
+.popular-tags-container{
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-container{
+  grid-template-columns: repeat(5, 1fr);
+}
+
+.company-data{
+  grid-column: span 2;
+}
+
+.company-description{
+  max-width: 85%;
+}
+
+.copyright-notice{
+  margin-top: auto;
+}
+
+.blog-post-data img{
+  height: 40rem;
+}
+
+
 /* Scrollbar styles */
 
 /* Blog post */
