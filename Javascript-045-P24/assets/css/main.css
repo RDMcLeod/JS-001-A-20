@@ -78,8 +78,8 @@ body.light-theme {
   --primary-background-color: #fff;
   --secondary-background-color: #f1f1f1;
   --hover-light-color: #fff;
-  --transparent-light-color: #252830;
-  --transparent-dark-color: rgba(0, 0, 0, 0.1);
+  --transparent-dark-color: #f1f1f1;
+  --transparent-light-color: rgba(0, 0, 0, 0.1);
 }
 
 /* Reusable classes */
@@ -334,6 +334,11 @@ body.light-theme {
 .article:hover .article-data-spacer {
   background-color: var(--hover-light-color);
 }
+
+.article:hover .article-title{
+  color: var(--hover-light-color);
+}
+
 .article-data {
   display: flex;
   align-items: center;
@@ -658,6 +663,8 @@ body.light-theme {
       grid-template-columns: 25rem 1fr;
   }
 }
+
+
 @media screen and (min-width: 768px) {
 
   .featured-content{
@@ -697,6 +704,8 @@ body.light-theme {
       height: var(--item-min-height-md);;
   }
 }
+
+
 @media screen and (min-width: 1024px) {
   .menu{
       position: static;
